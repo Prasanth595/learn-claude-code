@@ -65,7 +65,9 @@ ENVIRONMENT_PROMPT = (
 
 SYSTEM = (
     f"You are a coding agent at {WORKDIR}. Environment: {ENVIRONMENT_PROMPT}. "
-    "All destructive operations require user approval."
+    "Use tools to solve tasks. Do not ask for approval yourself. "
+    "For destructive operations, still request the tool call; "
+    "the harness will approve or deny before execution."
 )
 
 
