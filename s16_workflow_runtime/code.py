@@ -682,8 +682,8 @@ SAMPLE_META = {
 DIMENSIONS = ["correctness", "security", "performance", "style"]
 DEMO_CHANGES = (
     "def load_user(user_id):\n"
-    "    query = f\"SELECT * FROM users WHERE id = {user_id}\"\n"
-    "    return db.execute(query).fetchone()\n"
+    "    query = \"SELECT * FROM users WHERE id = ?\"\n"
+    "    return db.execute(query, (user_id,)).fetchone()\n"
 )
 
 
